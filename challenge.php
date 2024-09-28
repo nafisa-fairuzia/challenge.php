@@ -1,11 +1,11 @@
 <?php
 
-function konversiPanjang($asal, $tujuan, $nilai)
+function konversiPanjang($satuanAwal, $satuanAkhir, $nilai)
 {
-    $asal = strtolower($asal);
-    $tujuan = strtolower($tujuan);
+    $satuanAwal = strtolower($satuanAwal);
+    $satuanAkhir = strtolower($satuanAkhir);
 
-    switch ($asal) {
+    switch ($satuanAwal) {
         case 'm':
             $base = $nilai;
             break;
@@ -19,7 +19,7 @@ function konversiPanjang($asal, $tujuan, $nilai)
             return null; 
     }
 
-    switch ($tujuan) {
+    switch ($satuanAkhir) {
         case 'm':
             return $base;
         case 'km':
